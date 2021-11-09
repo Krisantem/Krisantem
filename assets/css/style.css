@@ -1,0 +1,957 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=NTR&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    height: 260px;
+    background-color: rgb(192, 192, 192);
+}
+
+h1 {
+    font-size: 46px;
+    font-weight: bold;
+    padding-top: 60px;
+    text-align: center;
+}
+
+div#separateurTitre {
+    height: 5px;
+    width: 36%;
+    margin: -15px 0 10px 0;
+}
+
+img#separator {
+    width: 100%;
+    height: 100%;
+}
+
+header a {
+    text-decoration: none;
+}
+
+nav#menuPrincipal {
+    background-color: lightgrey !important;
+}
+
+div#linkDownloadCv a {
+    cursor: default;
+}
+
+a#buttonDownloadCv {
+    cursor: default;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    width: 150px;
+    padding: 1px 2px;
+    background-color: orange;
+    border:0.16em solid rgba(255,255,255,0);
+    border-radius: 50px;
+    transition: all 0.2s;
+}
+
+a#buttonDownloadCv::before {
+    content: "";
+    display: block;
+    height: 0.20rem;
+    position: absolute;
+    top: 0.01rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background: #fff;
+    border-radius: 100%;
+
+    opacity: 0.7;
+    background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, 
+                                               #FFFFFF 20%, 
+                                               #FFFFFF 80%, 
+                                               rgba(255,255,255,0.00) 100%);
+}
+
+a#buttonDownloadCv::after {
+    content: "";
+    display: block;
+    height: 0.20rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background: #fff;
+    border-radius: 100%;
+    filter: blur(1px);
+    opacity: 0.2;
+    background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, 
+                                               #FFFFFF 20%, 
+                                               #FFFFFF 80%, 
+                                               rgba(255,255,255,0.00) 100%);
+}
+
+a#buttonDownloadCv:hover {
+    border-color: rgba(255,255,255,1);
+}
+
+span#spanCv {
+    /* font-family: 'Comfortaa', cursive; */
+    font-family: 'NTR', sans-serif;
+    font-size: 20px;
+    color: red;
+}
+
+span#spanCv::first-letter {
+    letter-spacing: 4px;
+}
+
+img#downArrow {
+    width: 11%;
+}
+
+span#spanDownload {
+    color: white;
+}
+
+a#miniButtonDownloadCv {
+    cursor: default;
+    width: 60px;
+    height: 60px;
+    background-color: orange;
+    border:0.16em solid rgba(255,255,255,0);
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+a#miniButtonDownloadCv:hover {
+    border-color: rgba(255,255,255,1);
+}
+
+img#downloadCv {
+    height: 50px;
+    padding: 0 0 3px 0;
+}
+
+ul#listesMenu li {
+    padding: 0 5px;
+}
+
+ul#listesMenu a {
+    font-weight: bold;
+    color: blue;
+    text-align: center;
+}
+
+ul#listesMenu a:hover {
+    color: orangered;
+}
+
+ul#listesMenu a#active {
+    color: green;
+    text-shadow: 0 0 0.2em #87F, 
+                 0 0 0.2em #87F, 
+                 0 0 0.2em #87F;
+}
+
+section {
+    min-height: 800px;
+}
+
+section:not(#diplomes) { /* Sélectionne toutes les sections, sauf la section diplomes */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Ciblage des sections impaires : 1, 3, 5... */
+section:nth-child(odd) { /* équivaut à section:nth-child(2n+1) */
+    background-color: rgb(231, 248, 231);
+}
+
+/* Ciblage des sections paires : 2, 4, 6... */
+section:nth-child(even) { /* équivaut à section:nth-child(2n) */
+    background-color: rgb(228, 250, 250);
+}
+
+section#a-propos p {
+    text-align: justify;
+    padding: 0 12px;
+}
+
+section#a-propos div.intro {
+    display: flex;
+}
+
+section#a-propos div#divPhoto {
+    padding: 0 32px;
+}
+
+/* Ce qui suit ne concerne que la photo. */
+/* On utilise le symbole # pour faire référence à l'id maPhoto. */
+img#maPhoto {
+	margin-bottom: 20px; /* Définit une marge de 20px en bas de la photo. */
+	width: 150px; /* Définit une largeur de 150 pixels pour cette photo. */
+    height: 150px; /* Définit une hauteur de 150 pixels pour cette photo. */
+	border-radius: 100px; /* Définit des coins arrondis autour de la photo. */
+	border: 5px solid red; /* Définit une bordure rouge, continue de 5 pixels autour de la photo. */
+	transition-duration: 2s; /* Définit une durée de 2 secondes pour l'animation de la photo. */
+	transition-delay: 0s; /*  Définit la durée à attendre avant de débuter la transition qui s'applique pour un changement de propriété. */
+	transition-property: all; /* Toutes les propriétés CSS qui peuvent avoir une transition animée seront concernées. */
+	transition-timing-function: ease-in-out; /* Décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un effet de transition sont calculées. Ceci permet donc de définir une courbe d'accélération, de manière à ce que la vitesse de la transition varie au cours de sa durée.
+	ease-in-out : la transition commence lentement, accélère puis ralentit à nouveau avant la fin. */
+}
+
+/* Ce qui suit ne concerne que l'apparence de la photo au moment où l'utilisateur la survole avec le pointeur. */
+img#maPhoto:hover {
+	width: 200px; /* Définit une largeur de 200 pixels pour cette photo. */
+    height: 200px; /* Définit une hauteur de 200 pixels pour cette photo. */
+	border-radius: 200px; /* Définit des coins arrondis autour de la photo. */
+	border: 5px solid purple; /* Définit une bordure bleue, continue de 5 pixels autour de la photo. */
+    margin-top: -20px;
+}
+
+h3.titreSection {
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 75px;
+}
+
+section#competences header {
+    height: 41px;
+    border-bottom: 1px dotted black;
+    border-radius: 16px 16px 0 0;
+}
+
+section#competences div.cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+section#competences div.cardCompetences {
+    width: 210px;
+}
+
+section#competences div.cardCompetences p:first-of-type {
+    margin-top: 10px;
+}
+
+h5 {
+    text-align: center;
+    font-weight: bold;
+}
+
+section#realisations {
+    padding-top: 50px;
+}
+
+section#realisations div.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Sélectionne la div ayant la classe cardRealisations située dans la première div ayant la classe cards située dans la section realisations */
+section#realisations div.cards:first-of-type div.cardRealisations { /* équivaut à  section#realisations div.cards:first-of-type div.cardRealisations:nth-child(-n+3) */
+    margin-bottom: 50px;
+}
+
+/* Sélectionne la div ayant la classe cardRealisations située dans la dernière div ayant la classe cards située dans la section realisations */
+section#realisations div.cards:last-of-type div.cardRealisations { /* équivaut à section#realisations div.cardRealisations:nth-last-child(-n+3) */
+    margin-bottom: 60px;
+}
+
+section#realisations div.card {
+    width: calc( 100% / 4 );
+    border-radius: 3%;
+}
+
+section#realisations a.realisationsThumbnails {
+    text-decoration: none;
+    display: block;
+    overflow: hidden;
+    background-image: url("../img/noun_plus button_261370.png");
+    background-repeat: no-repeat;
+    background-position: center 95px;
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: linear
+}
+
+section#realisations a.realisationsThumbnails img {
+    padding: 12px;
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: linear
+}
+
+section#realisations a.realisationsThumbnails:hover img {
+    opacity: .4;
+    transition-property: all;
+    transition-duration: .4s;
+    transition-timing-function: linear
+}
+
+section#realisations a.realisationsThumbnails p {
+    color: black;
+}
+
+section#diplomes {
+    padding-top: 50px;
+}
+
+section#diplomes div.card:last-of-type { /* Sélectionne le dernier div ayant la classe card dans la section diplomes */
+    margin-bottom: 60px !important;
+}
+
+/* section#diplomes i {
+    font-size: 50px;
+    transition: transform .8s;
+} */
+
+span.icon::before {
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+span.diplomes::before {
+    font-weight: 900;
+    font-size: 45px;
+    position: absolute;
+    top: 23px; 
+    left: 30px;
+}
+
+span.briefcase::before {
+    content: "\f0b1";
+}
+
+span.graduation_cap::before {
+    content: "\f19d";
+}
+
+section#diplomes div.cardDiplomes p {
+    margin-top: 30px;
+}
+
+section#diplomes div.cardDiplomes p span {
+    font-variant-caps: small-caps;
+}
+
+section#interets div.cardInterets {
+    height: 350px;
+    border-radius: 10%;
+}
+
+section#interets div.divPhoto {
+    width: 192px;
+    height: auto;
+    transition: transform .4s; /* Animation */
+}
+
+section#interets div.divPhoto:hover {
+    transform: scale(1.3);
+}
+
+section#interets div.cardInterets p {
+    margin-top: 2rem;
+}
+
+section#contact {
+    align-items: center;
+    padding-top: 50px;
+}
+
+section#contact div.cardContact h5 {
+    margin-top: 0;
+}
+
+span.contact::before {
+    font-size: 45px;
+}
+
+span.address::before {
+    font-weight: 400;
+    content: "\f0e0";
+    position: absolute;
+    top: 36px; 
+    left: 22px;
+}
+
+span.phone::before {
+    font-weight: 900;
+    content: "\f3cd";
+    position: absolute;
+    top: 9px; 
+    left: 30px;
+}
+
+span.email::before {
+    font-weight: 900;
+    content: "\f1fa";
+    position: absolute;
+    top: 9px; 
+    left: 22px;
+}
+
+section#contact a {
+    text-decoration: none;
+}
+
+section#contact a:hover {
+    color: black;
+}
+
+section#contact p {
+    font-size: 18px;
+}
+
+section#contact div.cardContact i.iconsContact{
+    font-size: 45px;
+}
+
+section#contact div.divFormContact {
+    width: 400px;
+}
+
+section#contact div.titreForm {
+    border-bottom: 0;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 
+                0 4px 20px 0 rgb(0 0 0 / 19%);
+}
+
+section#contact div.titreForm:after {
+    content: "";
+    display: block;
+    height: 4px;
+    background: rgb(228, 250, 250);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+}
+
+section#contact form {
+    padding: 20px;
+    margin-bottom: 60px;
+}
+
+section#contact div.buttons {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section#contact button {
+    border-radius: 20px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    height: 80px;
+    text-align: center;
+}
+
+footer div#icones-footer {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer a {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: orangered;
+}
+
+footer i.fas,
+footer i.fab {
+    font-size: 25px;
+}
+
+footer p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+#myBtn {
+	display: none; /* Hidden by default */
+	position: fixed; /* Fixed/sticky position */
+	bottom: 20px; /* Place the button at the bottom of the page */
+	right: 30px; /* Place the button 30px from the right */
+	z-index: 99; /* Make sure it does not overlap */
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+	background-color: red; /* Set a background color */
+	color: white; /* Text color */
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: 15px; /* Some padding */
+	border-radius: 10px; /* Rounded corners */
+	font-size: 18px; /* Increase font size */
+}
+  
+#myBtn:hover {
+	background-color: #555; /* Add a dark-grey background on hover */
+}
+
+@media (min-width: 1400px) {
+    section#realisations a.realisationsThumbnails {
+        background-position: center 110px;
+    }
+}
+
+@media (max-width: 1399px) {
+    section#realisations a.realisationsThumbnails {
+        background-position: center 80px;
+    }
+}
+
+@media (max-width: 1199px) {
+    section#realisations a.realisationsThumbnails {
+        background-position: center 65px;
+    }
+
+    section#diplomes div.card:first-of-type span.diplomes::before {
+        position: absolute;
+        top: 20px; 
+        left: 15px;
+    }
+
+    section#diplomes div.cardDiplomes span.diplomes::before {
+        position: absolute;
+        top: 34px; 
+        left: 15px;
+    }
+}
+
+@media (min-width:992px) and (max-width: 1199px) {
+    ul#listesMenu a {
+        display: flex;
+        align-items: center;
+    }
+
+    div#separateurTitre {
+        width: 48%;
+    }
+}
+
+@media (min-width: 992px) {
+    nav#menuPrincipal {
+        height: 50px;
+    }
+
+    a#buttonDownloadCv {
+        display: block;
+    }
+
+    a#miniButtonDownloadCv {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    nav#menuPrincipal {
+        height: 80px;
+    }
+    
+    div#divNavbar {
+        flex-direction: row-reverse;
+    }
+
+    a#buttonDownloadCv {
+        display: none;
+    }
+
+    a#miniButtonDownloadCv {
+        display: block;
+    }
+    
+    div#separateurTitre {
+        width: 60%;
+    }
+
+    section#realisations a.realisationsThumbnails {
+        background-image: none;
+        /* background-position: center 45px; */
+    }
+
+    section#diplomes div.card:first-of-type span.diplomes::before {
+        position: absolute;
+        top: 34px; 
+        left: 15px;
+    }
+
+    span.address::before {
+        position: absolute;
+        top: 33px; 
+        left: 8px;
+    }
+    
+    span.phone::before {
+        position: absolute;
+        top: 9px; 
+        left: 12px;
+    }
+    
+    span.email::before {
+        position: absolute;
+        top: 9px; 
+        left: 8px;
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    div#separateurTitre {
+        width: 75%;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    nav#menuPrincipal div#linkDownloadCv {
+        padding-left: 10px;
+    }
+
+    section#a-propos div.intro {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section#a-propos div.texteIntro {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    section#competences {
+        padding-top: 50px;
+    }
+    
+    section#competences div.cards {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section#competences div.cardCompetences {
+        height: 230px;
+        margin-bottom: 50px;
+    }
+
+    section#competences div.cardCompetences:nth-child(2) { /* On parle à la deuxième div.cardCompetences */
+        height: 240px;
+    }
+
+    section#competences div.cardCompetences:nth-last-child(1) { /* équivaut à section#competences div.cardCompetences:last-of-type */
+        height: 280px;
+        margin-bottom: 60px;
+    }
+
+    section#realisations div.cards {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    section#realisations div.cardRealisations {
+        width: 172px;
+    }
+
+    section#realisations div.cards:first-of-type div.cardRealisations, 
+    section#realisations div.cards:last-of-type div.cardRealisations:nth-child(-n+2) {
+        margin-bottom: 50px;
+    }
+
+    section#realisations div.cards:last-of-type div.cardRealisations:last-of-type {
+        margin-bottom: 60px;
+    }
+
+    section#diplomes div.card div.cardDiplomes {
+        height: 195px;
+    }
+
+    section#diplomes div.card:first-of-type span.diplomes::before {
+        position: absolute;
+        top: -40px; 
+        left: 11px;
+    }
+
+    section#diplomes div.card span.diplomes::before {
+        position: absolute;
+        top: -40px; 
+        left: 11px;
+    }
+
+    section#diplomes div.card span.diplomes.graduation_cap::before {
+        position: absolute;
+        top: -40px; 
+        left: 5px;
+    }
+
+    section#diplomes div.card-body,
+    section#contact div.card-body {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    section#diplomes div.card-body h5 {
+        padding-top: 15px;
+    }
+
+    section#diplomes div.card-body p {
+        margin-top: 20px;
+    }
+    
+    section#interets {
+        padding-top: 50px;
+    }
+
+    section#interets div.cardInterets:last-of-type {
+        margin-bottom: 60px !important;
+    }
+
+    section#contact div.card:first-of-type div.cardContact {
+        height: 218px;
+    }
+
+    section#contact div.card:nth-of-type(n+2) div.cardContact { /* équivaut à section#contact div.card:nth-of-type(2) div.cardContact, section#contact div.card:last-of-type div.cardContact */
+        height: 185px;
+    }
+
+    span.address::before {
+        position: absolute;
+        top: -46px; 
+        left: 11px;
+    }
+    
+    span.phone::before {
+        position: absolute;
+        top: -53px; 
+        left: 20px;
+    }
+    
+    span.email::before {
+        position: absolute;
+        top: -53px; 
+        left: 11px;
+    }
+
+    section#contact div.card-body h5 {
+        padding-top: 15px;
+    }
+    
+    section#contact div.card-body p {
+        padding-top: 15px;
+    }
+}
+
+@media (max-width: 540px) {
+
+    section#contact div.card:first-of-type div.cardContact {
+        height: 230px;
+    }
+
+    section#contact div.card:nth-of-type(n + 2) div.cardContact { /* équivaut à section#contact div.card:nth-of-type(2) div.cardContact, section#contact div.card:last-of-type div.cardContact */
+        height: 185px;
+    }
+
+    span.address::before {
+        position: absolute;
+        top: -48px; 
+        left: 10px;
+    }
+    
+    span.phone::before {
+        margin-right: 0;
+        position: absolute;
+        top: -52px; 
+        left: 18px;
+    }
+    
+    span.email::before {
+        position: absolute;
+        top: -52px; 
+        left: 10px;
+    }
+
+    section#diplomes div.card-body h5 {
+        padding-top: 10px;
+    }
+
+
+    footer {
+        height: 140px;
+    }
+
+    footer div#icones-footer {
+        display: flex;
+        column-gap: 120px;
+        row-gap: 25px;
+        flex-wrap: wrap;
+        padding-left: 115px;
+        padding-right: 115px;
+        justify-content: space-around;
+    }
+
+    footer p {
+        margin-top: 25px;
+    }
+
+    #myBtn {
+        position: fixed; /* Fixed/sticky position */
+        bottom: 35px;
+    }
+}
+
+@media (max-width: 474px) {
+    section#diplomes div.card:first-of-type span.diplomes::before {
+        position: absolute;
+        top: -40px; 
+        left: 4px;
+    }
+
+    section#diplomes div.card span.diplomes::before {
+        position: absolute;
+        top: -40px; 
+        left: 4px;
+    }
+
+    section#diplomes div.card span.diplomes.graduation_cap::before {
+        position: absolute;
+        top: -40px; 
+        left: 3px;
+    }
+
+    section#contact div.card:first-of-type div.cardContact {
+        height: 240px;
+    }
+
+    span.address::before {
+        position: absolute;
+        top: -45px; 
+        left: 3px;
+    }
+    
+    span.phone::before {
+        margin-right: 0;
+        position: absolute;
+        top: -52px; 
+        left: 7px;
+    }
+    
+    span.email::before {
+        position: absolute;
+        top: -52px; 
+        left: 3px;
+    }
+}
+
+@media (max-width: 439px) {
+    footer div#icones-footer {
+        display: flex;
+        column-gap: 100px;
+        row-gap: 25px;
+        flex-wrap: wrap;
+        padding-left: 100px;
+        padding-right: 100px;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 389px) {
+    section#diplomes div.card:first-of-type span.diplomes::before {
+        position: absolute;
+        top: -40px; 
+        left: 2px;
+    }
+
+    section#diplomes div.card span.diplomes::before {
+        position: absolute;
+        top: -40px; 
+        left: 2px;
+    }
+
+    section#diplomes div.card:nth-of-type(3) div.cardDiplomes {
+        height: 210px;
+    }
+
+    section#diplomes div.card:nth-of-type(3) span.diplomes.graduation_cap::before {
+        position: absolute;
+        top: -40px; 
+        left: -4px;
+    }
+
+    section#diplomes div.card span.diplomes.graduation_cap::before {
+        position: absolute;
+        top: -40px; 
+        left: -4px;
+    }
+
+    span.address::before {
+        position: absolute;
+        top: -45px; 
+        left: 1px;
+    }
+    
+    span.phone::before {
+        margin-right: 0;
+        position: absolute;
+        top: -52px; 
+        left: 9px;
+    }
+    
+    span.email::before {
+        position: absolute;
+        top: -52px; 
+        left: 1px;
+    }
+
+    footer {
+        height: 160px;
+    }
+
+    footer div#icones-footer {
+        display: flex;
+        column-gap: 60px;
+        row-gap: 25px;
+        flex-wrap: wrap;
+        padding-left: 80px;
+        padding-right: 80px;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 358px) {
+    section#contact div.card:first-of-type div.cardContact {
+        height: 265px;
+    }
+
+
+}

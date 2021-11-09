@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@400&display=swap');
+
+$color-primary: #f857a8;
+$color-secondary:#ff5858;
+$color-dark: #333;
+
+@mixin main-gradient{
+    background: $color-primary;
+    background: -webkit-linear-gradient(45deg, $color-primary, $color-secondary);
+    background: linear-gradient(45deg, $color-primary, $color-secondary);
+}
+
+h2{
+    color: $color-dark;
+    font-size: 3em;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#type{
+    text-shadow: 2px 2px #ddd;
+    display: inline-block;
+}
+
+#blinker{
+    @include main-gradient;
+    display: inline-block;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  
+  &.blink{
+    animation-name: type;
+    animation-duration: .75s;
+    animation-iteration-count: infinite;
+  }
+  
+}
+
+@keyframes type{
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

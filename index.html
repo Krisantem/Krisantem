@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Encodage des caractères pour la gestion de l'affichage des caractères spéciaux -->
+    <meta charset="UTF-8">
+    <!-- Compatibilité avec le navigateur Edge -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Contrôle la mise en page sur les navigateurs mobiles ici 1.0 signifie qu'il n'y a pas de zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- description sous le titre dans la recherche Google -->
+    <meta name="description" content="Portfolio d'un développeur web full-stack : développement de sites, applications, PHP, MySQL, JQuery, Bootstrap, UX...">
+    <!-- auteur du site -->
+    <meta name="author" content="Samuel">
+    <!-- titre de la page qui s'affiche en titre de l'onglet -->
+    <title>Portfolio de Samuel ESPENAN - Développeur Web Full-Stack &amp; Applications</title>
+    <!-- CSS de bootstrap en cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap Icons en CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- W3.CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- CSS de Font Awesome en cdn -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!-- On ajoute Font Awesome soit en CDN avec la balise link (voir ligne précédente), soit avec le script JS que l'on obtient dans Add My Kit's Code to a Project et que l'on colle dans le <head> (voir ligne suivante) -->
+    <!-- <script src="https://kit.fontawesome.com/9c200e63bf.js" crossorigin="anonymous"></script> -->
+
+    <!-- Add Animate.css using a CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- After installing Animate.css, add the class animate__animated to an element, along with any of the animation names (don't forget the animate__ prefix!) -->
+
+    <!-- Add AOS - Animate On Scroll library using a CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Fichier CSS compilé depuis SASS -->
+    <link rel="stylesheet" href="assets/scss/style.css">
+
+    <!-- CSS personnel TOUJOURS APRÈS celui du framework -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Add my Font Awesome's Kit to this project -->
+    <script src="https://kit.fontawesome.com/9c200e63bf.js" crossorigin="anonymous"></script>
+
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/site.webmanifest">
+    <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- <noscript class="d-block text-center bg-white">L'activation de JavaScript est recommandée.</noscript> -->
+</head>
+<body>
+    <header id="accueil">
+        <h1 class="text-center animate__animated animate__backInLeft">Samuel ESPENAN</h1>
+        <div id="separateurTitre" class="mx-auto">
+            <img id="separator" src="assets/img/minus.png" alt="Séparateur">
+        </div>
+        <h2 class="text-center">
+            <!-- TYPEWRITER 1 -->
+            <!-- <a href="#" class="typewrite" data-period="2000" data-type='[ "Développeur Web Full-Stack", "Développeur Applications" ]'>
+                <span class="wrap"></span>
+            </a> -->
+            <!-- TYPEWRITER 2 -->
+            <span id="type"></span><span id="blinker">|</span>
+        </h2>
+
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="menuPrincipal">
+        <div class="container-fluid" id="divNavbar">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="linkDownloadCv" class="d-flex justify-content-center align-items-center text-center">
+                <a class="navbar-brand mx-auto btn text-center" id="buttonDownloadCv" href="assets/files/CV_Samuel_ESPENAN.pdf" download>
+                    <span id="spanCv">CV</span>
+                    <img id="downArrow" src="assets/img/orange_down_arrow.png" alt="Flèche basse">
+                    <span id="spanDownload">Download</span>
+                </a>
+                <a class="navbar-brand mx-auto btn" id="miniButtonDownloadCv" href="assets/files/CV_Samuel_ESPENAN.pdf" download>
+                    <img id="downloadCv" src="assets/img/download-CV-pdf.png" alt="Bouton Téléchargement CV">
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarNav">
+                <ul class="navbar-nav d-lg-flex flex-lg-row justify-content-end align-items-end align-items-lg-center" id="listesMenu">
+                    <li class="nav-item d-flex flex-column justify-content-center">
+                        <a class="nav-link active" aria-current="page" href="#accueil">Accueil</a>
+                    </li>
+                    <li class="nav-item d-flex flex-column justify-content-center">
+                        <a class="nav-link" href="#a-propos">À propos</a>
+                    </li>
+                    <li class="nav-item d-flex flex-column justify-content-center">
+                        <a class="nav-link" href="#competences">Compétences</a>
+                    </li>
+                    <li class="nav-item d-flex flex-column justify-content-center">
+                        <a class="nav-link" href="#realisations">Réalisations</a>
+                    </li>
+                    <li class="nav-item d-flex flex-column justify-content-center">
+                        <a class="nav-link" href="#diplomes">Diplômes / Formations</a>
+                    </li>
+                    <li class="nav-item d-flex flex-column justify-content-center">
+                        <a class="nav-link" href="#interets">Centres d'intérêts</a>
+                    </li>
+                    <li class="nav-item d-flex flex-column justify-content-center">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div> <!-- Fin navbarNav -->
+        </div> <!-- Fin container -->
+    </nav>
+
+    <main>
+
+        <section id="a-propos">
+            <div class="contenu">
+                <h3 class="titreSection">À propos</h3>
+                <div class="intro">
+                    <div id="divPhoto">
+                        <!--title représente ce qui est affiché dans l'info-bulle quand on passe le curseur de la souris sur la photo. -->
+                        <!-- alt représente le texte qui est affiché si l'image ne s'est pas chargée correctement et sur l'ordinateur d'un non-voyant -->
+                        <img id="maPhoto" src="assets/img/photo_retouchee.jpg" alt="Photo Samuel ESPENAN" title="Samuel ESPENAN" />
+                    </div>
+                    <div class="texteIntro">
+                        <p>
+                            Développeur passionné, autonome et persévérant, je conçois des sites Internet et des applications PC et mobiles.
+                        </p>
+                        <p>
+                            Mon expérience de 14 années dans l'aéronautique dans les traitements des matériaux m'a permis de travailler en équipe et donc d'améliorer mon sens du relationnel. Cela m'a aussi appris le respect des consignes, du cahier des charges et des règles de sécurité. Ces mêmes notions s'appliquent également au développement puisque développer une application ou un site Internet peut se faire en coordination avec d'autres développeurs et cela nécessite de suivre les règles établies par le client et les protocoles informatiques afin de créer des sites Internet et des applications optimisés et fiables.
+                        </p>
+                    </div>
+                </div> <!-- Fin intro -->
+            </div> <!-- Fin contenu -->
+        </section> <!-- Fin a-propos -->
+
+        <section id="competences">
+            <div class="contenu">
+                <h3 class="titreSection">Compétences</h3>
+                <div class="cards">
+                    <div class="w3-card-4 w3-border-bottom w3-border-left w3-border-right w3-round-xlarge cardCompetences" data-aos="fade-right">
+                        <header class="w3-container w3-light-grey">
+                            <h5>Back-end</h5>
+                        </header>
+                        <div class="w3-container">
+                            <p>
+                                <abbr title="PHP: Hypertext Preprocessor">PHP</abbr>
+                            </p>
+                            <p>
+                                <abbr title="Structured Query Language">SQL</abbr> / 
+                                MySQL
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w3-card-4 w3-border-bottom w3-border-left w3-border-right w3-round-xlarge cardCompetences" data-aos="fade-up">
+                        <header class="w3-container w3-light-grey">
+                            <h5>Front-end</h5>
+                        </header>
+                        <div class="w3-container">
+                            <p>
+                                <abbr title="HyperText Markup Language">HTML</abbr> / 
+                                <abbr title="Cascading Style Sheets">CSS</abbr>
+                            </p>
+                            <p>
+                                Bootstrap / W3.CSS
+                            </p>
+                            <p>
+                                JavaScript
+                            </p>
+                            <p>
+                                WordPress
+                            </p>
+                            <p>
+                                <abbr title="Responsive Web Design">RWD</abbr> / 
+                                <abbr title="User eXperience">UX</abbr>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w3-card-4 w3-border-bottom w3-border-left w3-border-right w3-round-xlarge cardCompetences" data-aos="fade-left">
+                        <header class="w3-container w3-light-grey">
+                            <h5>Transversales</h5>
+                        </header>
+                        <div class="w3-container">
+                            <p>
+                                <abbr title="Système de Gestion de Bases de Données Relationnelles">SGBDR</abbr>
+                            </p>
+                            <p>Protocoles OpenVPN, <abbr title="Secure Shell">SSH</abbr>, <abbr title="Secure File Transfer Protocol">SFTP</abbr></p>
+                            <p>GIT</p>
+                            <p>Certificat de Sécurité Numérique <abbr title="Agence Nationale de la Sécurité des Systèmes d'Information">ANSSI</abbr></p>
+                            <p>Anglais Technique</p>
+                        </div>
+                    </div>
+                </div> <!-- Fin cards -->
+            </div> <!--- Fin contenu -->
+        </section> <!-- Fin competences -->
+
+        <section id="realisations">
+            <div class="contenu">
+                <h3 class="titreSection">Réalisations</h3>
+                <div class="cards">
+                    <div class="card border-primary cardRealisations" data-aos="fade-up-right">
+                        <a href="assets/img/Site_CV_Web.png" target="_blank" class="realisationsThumbnails">
+                            <img src="assets/img/Site_CV_Web.png" class="card-img-top" alt="Capture d'écran d'un CV sous forme Web">
+                            <div class="card-body">
+                                <p class="card-text">Réalisation d'une version Web de mon CV pendant la formation au GRETA en 2020</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card border-primary cardRealisations" data-aos="zoom-in">
+                        <a href="assets/img/Site_Générateur_Mentions_Légales_et_Politique_de_Confidentialité.png" target="_blank" class="realisationsThumbnails">
+                            <img src="assets/img/Site_Générateur_Mentions_Légales_et_Politique_de_Confidentialité.png" class="card-img-top" alt="Capture d'écran d'une application Web">
+                            <div class="card-body">
+                                <p class="card-text">Réalisation sous la forme d'une application Web d'un générateur de mentions légales et de politique de confidentialité lors d'un stage pendant la formation au GRETA en 2020</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card border-primary cardRealisations" data-aos="fade-up-left">
+                        <a href="assets/img/Site_Mountain_Sports.png" target="_blank" class="realisationsThumbnails">
+                            <img src="assets/img/Site_Mountain_Sports.png" class="card-img-top" alt="Capture d'écran d'un site internet conçu sous Wordpress">
+                            <div class="card-body">
+                                <p class="card-text">Réalisation d'un site internet sous WordPress pour la formation AFPA en 2021</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card border-primary cardRealisations" data-aos="fade-up-right">
+                        <a href="#" class="realisationsThumbnails">
+                            <img src="assets/img/PIXNIO-1921867-2857x1900.jpg" class="card-img-top" alt="Photo paysage">
+                            <div class="card-body">
+                                <p class="card-text">Prochainement...</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card border-primary cardRealisations" data-aos="zoom-out-up">
+                        <a href="#" class="realisationsThumbnails">
+                            <img src="assets/img/PIXNIO-1921867-2857x1900.jpg" class="card-img-top" alt="Photo paysage">
+                            <div class="card-body">
+                                <p class="card-text">Prochainement...</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card border-primary cardRealisations" data-aos="fade-up-left">
+                        <a href="#" class="realisationsThumbnails">
+                            <img src="assets/img/PIXNIO-1921867-2857x1900.jpg" class="card-img-top" alt="Photo paysage">
+                            <div class="card-body">
+                                <p class="card-text">Prochainement...</p>
+                            </div>
+                        </a>
+                    </div>
+                </div> <!-- Fin cards -->
+            </div> <!-- Fin contenu -->
+        </section> <!-- Fin realisations -->
+
+        <section id="diplomes">
+            <div class="container">
+                <div class="row flex-column justify-content-center align-items-center">
+                    <h3 class="titreSection">Diplômes / Formations</h3>
+                    <div class="card mb-5 col-md-8 col-9">
+                        <div class="row flex-md-row flex-column justify-content-center align-items-center cardDiplomes">
+                            <!-- <div class="col-2 d-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500">
+                                <i class="fas fa-briefcase"></i>
+                            </div> -->
+                            <span class="icon diplomes briefcase d-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500"></span>
+                            <div class="col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Formation Développeur Web et Web Mobile</h5>
+                                    <p class="card-text text-center">AFPA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-5 col-md-8 col-9">
+                        <div class="row flex-md-row flex-column justify-content-center align-items-center cardDiplomes">
+                            <!-- <div class="col-2 d-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500">
+                                <i class="fas fa-briefcase"></i>
+                            </div> -->
+                            <span class="icon diplomes briefcase d-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500"></span>
+                            <div class="col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Formation Sensibilisation et Accès aux Métiers du Numérique</h5>
+                                    <p class="card-text text-center">GRETA (<span>Pau</span>)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-5 col-md-8 col-9">
+                        <div class="row flex-md-row flex-column justify-content-center align-items-center cardDiplomes">
+                            <!-- <div class="col-2 d-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div> -->
+                            <span class="icon diplomes graduation_cap d-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500"></span>
+                            <div class="col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">BTS Informatique de Gestion, option Développeur d'Applications</h5>
+                                    <p class="card-text text-center">Lycée Marie Curie (<span>Tarbes</span>)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-5 col-md-8 col-9">
+                        <div class="row flex-md-row flex-column justify-content-center align-items-center cardDiplomes">
+                            <!-- <div class="col-2 d-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div> -->
+                            <span class="icon diplomes graduation_cap d-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500"></span>
+                            <div class="col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">BTS Traitements des Matériaux, option Traitements Thermiques</h5>
+                                    <p class="card-text text-center">Lycée Jean Dupuy (<span>Tarbes</span>)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-5 col-md-8 col-9">
+                        <div class="row flex-md-row flex-column justify-content-center align-items-center cardDiplomes">
+                            <!-- <div class="col-2 d-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div> -->
+                            <span class="icon diplomes graduation_cap d-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500"></span>
+                            <div class="col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">BTS Traitements des Matériaux, option Traitements de Surface</h5>
+                                    <p class="card-text text-center">Lycée Jean Dupuy (<span>Tarbes</span>)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-5 col-md-8 col-9">
+                        <div class="row flex-md-row flex-column justify-content-center align-items-center cardDiplomes">
+                            <!-- <div class="col-2 d-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div> -->
+                            <span class="icon diplomes graduation_cap d-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500"></span>
+                            <div class="col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bac Sciences et Technologies de Laboratoire, option Chimie</h5>
+                                    <p class="card-text text-center">Lycée Marie Curie (<span>Tarbes</span>)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Fin row -->
+
+                <!-- <i class="fas fa-graduation-cap"></i> f19d -->
+
+                <!-- <i class="fas fa-user-graduate"></i> f501 -->
+
+                <!-- <i class="fas fa-briefcase"></i> f0b1 -->
+
+            </div> <!-- Fin container -->
+        </section> <!-- Fin diplomes -->
+
+        <section id="interets">
+            <div class="container">
+                <div class="row flex-md-row flex-column justify-content-md-evenly justify-content-center align-items-center">
+                    <h3 class="titreSection">Centres d'intérêts</h3>
+                    <div class="card shadow mb-5 col-xl-3 col-lg-4 col-md-5 col-7 cardInterets">
+                        <div class="divPhoto d-flex justify-content-center align-self-center col-2" data-aos="zoom-in-up">
+                            <img src="assets/img/computer-help-info.png" class="card-img-top" alt="Image d'un ordinateur avec les icônes informations et outils">
+                        </div>
+                        <div class="card-body col-12">
+                            <h5 class="card-title">Aide et dépannage</h5>
+                            <p class="cart-text">Conseil et assistance en informatique.</p>
+                        </div>
+                    </div>
+                    <div class="card shadow mb-5 col-xl-3 col-lg-4 col-md-5 col-7 cardInterets">
+                        <div class="divPhoto d-flex justify-content-center align-self-center col-2" data-aos="zoom-in-up">
+                            <img src="assets/img/wlan-3131127_640.png" class="card-img-top" alt="Image d'un réseau informatique">
+                        </div>
+                        <div class="card-body col-12">
+                            <h5 class="card-title">Informatique</h5>
+                            <p class="card-text">Veille technologique.</p>
+                        </div>
+                    </div>
+                </div> <!-- Fin row -->
+            </div> <!-- Fin container -->
+        </section> <!-- Fin interets -->
+
+        <section id="contact">
+            <div class="container">
+                <div class="row flex-column justify-content-center align-items-center">
+                    <h3 class="titreSection">Contact</h3>
+                    <div class="card mb-5 col-md-8 col-9">
+                        <div class="row flex-md-row flex-column justify-content-center align-items-center cardContact">
+                            <!-- <div class="col-2 d-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500">
+                                <i class="iconsContact far fa-envelope"></i>
+                            </div> -->
+                            <span class="icon contact address d-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500"></span>
+                            <div class="col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Adresse</h5>
+                                    <p class="card-text text-center">
+                                        6 rue du Pont Long<br>
+                                        Résidence Les Acacias, Escalier 1<br>
+                                        64121 SERRES-CASTET                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-5 col-md-8 col-9">
+                        <a href="tel:+33615482353">
+                            <div class="row flex-md-row flex-column justify-content-center align-items-center cardContact">
+                                <!-- <div class="col-2 d-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500">
+                                    <i class="iconsContact fas fa-mobile-alt"></i>
+                                </div> -->
+                                <span class="icon contact phone d-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500"></span>
+                                <div class="col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Téléphone</h5>
+                                        <p class="card-text text-center">
+                                            +33 (0)6 15 48 23 53
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card mb-5 col-md-8 col-9">
+                        <a href="mailto:Samuel.espenan@gmail.com">
+                            <div class="row flex-md-row flex-column justify-content-center align-items-center cardContact">
+                                <!-- <div class="col-2 d-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500">
+                                    <i class="iconsContact fas fa-at"></i>
+                                </div> -->
+                                <span class="icon contact email d-flex justify-content-center align-items-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500"></span>
+                                <div class="col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Adresse email</h5>
+                                        <p class="card-text text-center">
+                                        Samuel.espenan@gmail.com
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- <i class="fas fa-envelope"></i> f0e0 -->
+
+                    <!-- <i class="far fa-envelope"></i> f0e0 -->
+
+                    <!-- <i class="fas fa-mobile-alt"></i> f3cd -->
+
+                    <!-- <i class="fas fa-mobile"></i> f10b -->
+
+                    <!-- <i class="fas fa-at"></i> f1fa -->
+
+                </div> <!-- Fin row -->
+            </div> <!-- Fin container -->
+        </section> <!-- Fin contact -->
+
+
+        <!-- <section id="contact">
+            <div class="contenu">
+                <h3 class="titreSection">Contact</h3>
+                <div class="w3-card-4 w3-round-large divFormContact">
+                    <div class="w3-container w3-blue w3-round-large titreForm">
+                        <h4 class="w3-center">Formulaire de contact</h4>
+                    </div>
+                    <form id ="formContact" class="w3-container">
+                        <p>
+                            <input id="nom" class="w3-input" name="nom" type="text" required>
+                            <label for="nom" class="w3-text-blue">Nom</label>
+                        </p>
+
+                        <p>
+                            <input id="prenom" class="w3-input" name="prenom" type="text" required>
+                            <label for="prenom" class="w3-text-blue">Prénom</label>
+                        </p>
+
+                        <p>
+                            <input id="societe" class="w3-input" name="societe" type="text">
+                            <label for="societe" class="w3-text-blue">Société</label>
+                        </p>
+
+                        <p>
+                            <input id="tel" class="w3-input" name="tel" type="tel" required>
+                            <label for="tel" class="w3-text-blue">Téléphone</label>
+                        </p>
+
+                        <p>
+                            <input id="email" class="w3-input" name="email" type="email" required>
+                            <label for="email" class="w3-text-blue">Email</label>
+                        </p>
+
+                        <p>
+                            <input id="sujet" class="w3-input" name="sujet" type="text" required>
+                            <label for="sujet" class="w3-text-blue">Sujet</label>
+                        </p>
+
+                        <p>
+                            <textarea id="message" class="w3-input" name="message" rows="5" required></textarea>
+                            <label for="message" class="w3-text-blue">Message</label>
+                        </p>
+
+                        <div class="buttons">
+                            <button id="buttonEffacer" class="w3-btn w3-blue">Effacer</button>
+                            <button id="buttonEnvoyer" class="w3-btn w3-blue">Envoyer</button>
+                        </div>
+                    </form> Fin formContact
+                </div> divFormContact
+            </div> Fin contenu
+        </section> Fin contact -->
+
+        <button id="myBtn" title="Go to top" onclick="TopFunction();">Top</button>
+
+    <!--
+        <div>Icônes conçues par <a href="https://www.flaticon.com/fr/auteurs/ultimatearm" title="ultimatearm">ultimatearm</a> from <a href="https://www.flaticon.com/fr/" title="Flaticon">www.flaticon.com</a></div>
+    -->
+    </main>
+
+    <footer>
+        <div class="contenu">
+            <div id="icones-footer">
+                <a href="tel:+33615482353">
+                    <i class="fas fa-phone-alt"></i>
+                </a>
+                <a href="mailto:Samuel.espenan@gmail.com">
+                    <i class="fas fa-at"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/samuel-espenan-b0bb7963/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://viadeo.journaldunet.com/p/samuel-espenan-194681" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-viadeo"></i>
+                </a>
+                
+                <!-- <i class="fas fa-envelope"></i> -->
+                
+                <!-- <i class="fab fa-linkedin-in"></i> -->
+                
+            </div>
+            <p>© 2021 Samuel ESPENAN - Tous droits réservés.</p>
+        </div> <!-- Fin contenu -->
+    </footer>
+
+    <!-- JS de bootstrap en cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Add AOS - Animate On Scroll library script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Initialize AOS -->
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- JS personnel TOUJOURS APRÈS celui du framework -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@400&display=swap");
+h2 {
+  color: #333;
+  font-size: 3em;
+  font-family: 'Saira Semi Condensed', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+#type {
+  text-shadow: 2px 2px #ddd;
+  display: inline-block;
+}
+
+#blinker {
+  background: #f857a8;
+  background: linear-gradient(45deg, #f857a8, #ff5858);
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#blinker.blink {
+  -webkit-animation-name: type;
+          animation-name: type;
+  -webkit-animation-duration: .75s;
+          animation-duration: .75s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes type {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes type {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
